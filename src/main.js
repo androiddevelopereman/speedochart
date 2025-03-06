@@ -13,9 +13,6 @@ import VueApexCharts from "vue3-apexcharts";
 // import * as bootstrap from 'bootstrap';
 // window.bootstrap = bootstrap;
 
-
-
-
 const i18n = createI18n({
   locale: "en",
   fallbackLocale: "en",
