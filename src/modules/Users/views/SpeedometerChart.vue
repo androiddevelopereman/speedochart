@@ -4,7 +4,6 @@
       <Sidebar />
       <div class="content-bar">
         <NavBar />
-
         <hr />
         <Speedo />
       </div>
@@ -15,7 +14,7 @@
 <script setup>
 import NavBar from "../components/NavBar.vue";
 import Sidebar from "../components/Sidebar.vue";
-import Speedo from "../components/Pie.vue";
+import Speedo from "../components/Speedo.vue";
 </script>
 <style scoped>
 .page {
