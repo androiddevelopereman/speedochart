@@ -8,23 +8,7 @@ import { onMounted } from "vue";
 const { driver_name, last_speed, vehicle_name, vehicle_id } =
   data2.data_for_speedometer;
 
-// onMounted(() => {
-//   const tooltipTriggerList = document.querySelectorAll(
-//     '[data-bs-toggle="tooltip"]'
-//   );
-//   const tooltipList = [...tooltipTriggerList].map(
-//     (tooltipTriggerEl) => new Tooltip(tooltipTriggerEl)
-//   );
-// });
-
-const tooltipText = computed(
-  () =>
-    `<h5>${driver_name}</h5>
-  <p>Vehicle: ${vehicle_name}</p>
-  <p>Vehicle ID: ${vehicle_id}</p>`
-);
-
-setTimeout(() => {
+onMounted(() => {
   const tooltipTrigger = document.querySelector(
     '[data-bs-toggle="tooltip"] g.arc'
   );
@@ -32,7 +16,14 @@ setTimeout(() => {
     html: true,
     title: tooltipText.value,
   });
-}, 1000);
+});
+
+const tooltipText = computed(
+  () =>
+    `<h5>${driver_name}</h5>
+  <p>Vehicle: ${vehicle_name}</p>
+  <p>Vehicle ID: ${vehicle_id}</p>`
+);
 </script>
 
 <template>
